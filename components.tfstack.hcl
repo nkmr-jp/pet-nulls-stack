@@ -61,5 +61,5 @@ component "pet2" {
     random = provider.random.this
   }
 
-  depends_on = [nulls]
+  depends_on = [component.nulls]
 }
