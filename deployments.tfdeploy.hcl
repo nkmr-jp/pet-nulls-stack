@@ -14,3 +14,10 @@ deployment "complex" {
     instances        = 3
   }
 }
+
+orchestrate "auto_approve" "simple" {
+  check {
+    condition = context.plan.deployment == deployment.simple
+    reason    = "Automatically approved simple."
+  }
+}
