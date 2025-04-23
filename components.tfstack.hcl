@@ -50,3 +50,16 @@ component "nulls" {
 
   depends_on = [component.pet]
 }
+
+component "pet2" {
+  source = "./pet"
+  inputs = {
+    prefix = var.prefix
+  }
+
+  providers = {
+    random = provider.random.this
+  }
+
+  depends_on = [component.pet2]
+}

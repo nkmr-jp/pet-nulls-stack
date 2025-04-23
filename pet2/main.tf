@@ -5,7 +5,7 @@ terraform {
   required_providers {
     random = {
       source = "hashicorp/random"
-      version = "3.5.1"
+      version = "3.5.2"
     }
   }
 }
@@ -16,7 +16,7 @@ variable "prefix" {
 
 resource "random_pet" "this" {
   prefix = var.prefix
-  length = 20
+  length = 10
 }
 
 output "name" {
