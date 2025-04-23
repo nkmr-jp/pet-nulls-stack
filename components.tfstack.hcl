@@ -47,4 +47,6 @@ component "nulls" {
   providers = {
     null = provider.null.this
   }
+
+  depend_on = [pet]
 }
